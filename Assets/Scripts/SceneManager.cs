@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
     public static SceneManager Instance;
 
     public Player Player;
-    public List<Enemie> Enemies;
+    public List<GameObject> Enemies;
     public GameObject Lose;
     public GameObject Win;
 
     private int currWave = 0;
     [SerializeField] private LevelConfig Config;
-
+    [SerializeField] private Text _wavesInfo;
     private void Awake()
     {
         Instance = this;
@@ -25,12 +26,17 @@ public class SceneManager : MonoBehaviour
         SpawnWave();
     }
 
-    public void AddEnemie(Enemie enemie)
+	private void Update()
+	{
+        _wavesInfo.text = $"Current wave:\n{currWave}/{Config.Waves.Length}";
+	}
+
+	public void AddEnemie(GameObject enemie)
     {
         Enemies.Add(enemie);
     }
 
-    public void RemoveEnemie(Enemie enemie)
+    public void RemoveEnemie(GameObject enemie)
     {
         Enemies.Remove(enemie);
         if(Enemies.Count == 0)

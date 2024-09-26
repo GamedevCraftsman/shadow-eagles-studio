@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 1d6a3a495edbf24439b7f6ca0d94afd8, type: 2}
     - target: {fileID: -4216859302048453862, guid: cb01db2707aa97a4e94efee03de71f52, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.015
+      value: 0.0125
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cb01db2707aa97a4e94efee03de71f52, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.015
+      value: 0.0125
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cb01db2707aa97a4e94efee03de71f52, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.015
+      value: 0.0125
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: cb01db2707aa97a4e94efee03de71f52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: cb01db2707aa97a4e94efee03de71f52, type: 3}
       propertyPath: m_Name
-      value: Goblin
+      value: MiniGoblin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerAddHP: 2
-  Hp: 2
+  Hp: 1
   Damage: 1
-  AtackSpeed: 1
-  AttackRange: 2
+  AtackSpeed: 0.75
+  AttackRange: 1
   AnimatorController: {fileID: 7475179364339281051}
   Agent: {fileID: 8767279960998370427}
 --- !u!195 &8767279960998370427
